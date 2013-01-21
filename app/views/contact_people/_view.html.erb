@@ -1,0 +1,41 @@
+<%@client = Client.find(params[:id])%>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @contact_person.user_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @contact_person.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @contact_person.last_name %>
+</p>
+
+<p>
+  <b>E-mail:</b>
+  <%= @contact_person.email %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @contact_person.position %>
+</p>
+<!--
+<p>
+  <b>Client:</b>
+  <%#= @contact_person.client_id %>
+</p>
+-->
+<p>
+  <b>Client:</b>
+  <%= @client.name %>
+</p>
+
+<p>
+  <b><%= link_to '<< Back', contact_people_path %></b>
+</p>

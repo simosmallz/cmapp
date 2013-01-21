@@ -1,0 +1,46 @@
+<%- @clients = Client.all %>
+<!--
+<div id="client_list" >
+<table>
+<%# @clients.each do |client| %>
+<tr class="<%#= cycle('list_line_odd', 'list_line_even') %>" >
+<td class="list_description" >
+<dl>
+<dt><%#= client.name %></dt>
+<dd><%#= client.industry %></dd>
+</dl>
+</td>
+<td class="list_actions" >
+<%#= link_to 'Show', client %> |
+<%#= link_to 'Edit', edit_client_path(client) %> |
+<%#= link_to 'Delete', client,
+:confirm => 'Are you sure?',
+:method => :delete %>
+</td>
+</tr>
+<%# end %>
+</table>
+</div>
+<br />
+-->
+<div id="client_list" >
+
+<table>
+
+<% @clients.each do |client| %>
+<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+<td class="list_id_numbering" ><%= client.id %></td>
+<td class="list_description" >
+<dl>
+<dt><%= client.name %></dt>
+<dd><%= client.industry %></dd>
+</dl>
+</td>
+<td class="list_actions" >
+<%= link_to 'Edit', edit_client_path(client) %> |
+</td>
+</tr>
+<% end %>
+</table>
+</div>
+<br />

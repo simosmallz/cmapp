@@ -1,0 +1,102 @@
+// Place all the styles related to the Devices controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#device_list table {
+        //border-collapse: collapse;
+        border-bottom: thick solid 1px #000;
+        border-right: thick solid 1px #244;
+        width: 500px;
+        margin-left: 30px;
+}
+
+#device_list table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+
+#device_list .list_description {
+  width:        70%;
+}
+
+#device_list .list_description dl {
+        margin: 0;
+}
+
+#device_list .list_description dt {
+	color:        #244;
+	font-weight:  normal;
+	font-size:    normal;
+}
+
+#device_list .list_description dd {
+        margin: 0;
+}
+
+#device_list .list_actions {
+  font-size:   normal;
+  text-align:   left;
+  padding-left: 1em;
+  vertical-align: bottom;
+}
+
+#device_list .list_line_even {
+  background:    rgb(251, 183, 0);
+}
+
+#device_list .list_line_odd {
+  background:   #fff;
+
+}
+#device_list .list_id_numbering {
+  font-size:   normal;
+  text-align:   left;
+  padding-left: 1em;
+  vertical-align: top;
+}
+
+#device_form table {
+        border-collapse: collapse;
+        width: 500px;
+        margin-left: 30px;
+        color: #000;
+        font-weight:  normal;
+
+}
+
+#device_form table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+#device_form table th {
+        padding: 5px;
+        vertical-align: top;
+        text-align: left;
+}
+
+#device_index table tr td {
+        padding: 10px;
+        vertical-align: top;
+        text-align: left;
+}
+
+#device_index table th {
+        padding-left: 15px;
+        vertical-align: top;
+}
+
+#device_index table {
+        border-collapse: collapse;
+        width: 600px;
+        margin-left: 30px;
+        color: #000;
+        font-weight:  normal;
+
+}
+#device_list p {
+     
+        color: #000;
+        font-weight:  normal;
+
+}

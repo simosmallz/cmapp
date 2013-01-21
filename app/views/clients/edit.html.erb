@@ -1,0 +1,28 @@
+<!--
+<h1>Editing client</h1>
+
+<%#= render 'form' %>
+
+<%#= link_to 'Show', @client %> |
+<%#= link_to 'Back', clients_path %>
+-->
+
+<div style="opacity: 1;" id="ajax-content-wrapper">
+    <div id="sub">
+        <div id="subtop">
+            <%= render "home/sub_nav_admin"%>
+        </div>                                                               
+        <div id="subbottom" class="clearfix">
+            <%= render "client_sidebar"%>
+            <div id="rightcolbox">
+                <div id="subrightcol" style="padding-top:30px;">
+                    <div id="subrightcol-bottom">
+                        <h2>Edit Sttaf</h2> 
+                        <%= render "form"%>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> <!-- END SUB -->
+</div>
+        <!-- END PAGE CONTENT -->

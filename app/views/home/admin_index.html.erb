@@ -1,0 +1,62 @@
+
+<div class="main" id="main-two-columns-left">
+
+        <div class="right" id="main-content">
+
+            <div class="section">
+
+                <div class="section-content">
+
+                    <h1>Administrative Console</h1>
+
+                    <div class="content-separator"></div>
+
+                    <div class="col3 left">
+                        <div class="column-content">
+
+                            <div class="post">
+                                <h3 style="color:#579;">Staff</h3>
+                                <p>Staff Management Module - This module would enable the creating, editing, and deleting of staffs who would be the Change Issuers.</p>
+                                <strong><%= link_to 'Enter Module', :controller=>"staffs", :action=>"index" %>&#187;</strong>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col3 col3-mid left">
+                        <div class="column-content">
+
+                            <div class="post">
+                                <h3 style="color:#579;">Client</h3>
+                                <p>Client Management Module - This module would enable the creating, editing, and deleting of clients whom changes would be issued on its behalf.</p>
+                                <strong><%= link_to 'Enter Module', :controller=>"clients", :action=>"index" %>&#187;</strong>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col3 right">
+                        <div class="column-content">
+
+                            <div class="post">
+                                <h3 style="color:#579;">Contact Personnel</h3>
+                                <p>Contact Personnel Management Module - This module would enable the creating, editing, and deleting of clients' contacts who would approve the changes issued.</p>
+                                <strong><%= link_to 'Enter Module', :controller=>"contact_people", :action=>"index" %>&#187;</strong>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="clearer">&nbsp;</div>
+
+                </div>
+
+            </div>
+
+            <div class="clearer">&nbsp;</div>
+            
+        </div>
+
+        <%=render 'sub_nav_admin'%>
+
+    </div>

@@ -1,0 +1,36 @@
+<!--
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%#= @client.name %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%#= @client.industry %>
+</p>
+
+
+<%#= link_to 'Edit', edit_client_path(@client) %> |
+<%#= link_to 'Back', clients_path %>
+-->
+<div style="opacity: 1;" id="ajax-content-wrapper">
+    <div id="sub">
+        <div id="subtop">
+            <%= render "home/sub_nav_admin"%>
+        </div>                                                                
+        <div id="subbottom" class="clearfix">
+            <%= render "client_sidebar"%>
+            <div id="rightcolbox">
+                <div id="subrightcol" style="padding-top:30px;">
+                    <div id="subrightcol-bottom">
+                        <h2><%= @client.name %></h2> 
+                        <%= render "view"%>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> <!-- END SUB -->
+</div>
+        <!-- END PAGE CONTENT -->

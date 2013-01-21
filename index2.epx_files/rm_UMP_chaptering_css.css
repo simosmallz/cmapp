@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* universal media player chaptering specific CSS 02-22-11 - VS */
+
+
+.UMP_CHPTR_BG {
+	background-color: #000;
+	/* for IE */
+	filter:alpha(opacity=60);
+	/* CSS3 standard */
+	opacity:0.6;
+}
+
+
+.chapterTimes {
+	float:right;
+	color:#FFFFFF;
+	padding-right: 10px;
+	color:#FFFFFF;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+.chapterTitles {
+	float:left;
+	color:#FFFFFF;
+	padding-left: 0px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+.chapterTotalTime {
+	color: #FFFFFF;	
+	border-bottom: thin;
+	border-bottom-style:solid;
+	height: 20px;
+	border-bottom-color: #FFFFFF;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.chapterContainer {
+	padding: 25px;
+	padding-top: 16px;
+	overflow: hidden;
+}
+
+.singleChapterDiv {
+	clear: both;
+	border-bottom: thin;
+	border-bottom-style:solid;
+	height: 20px;
+	padding-top: 5px;
+	border-bottom-color: #FFFFFF;
+	cursor:pointer;
+}
+
+
+.ChapterHighlight {
+	background-color: #0099cc;
+	margin-left: -6px;
+	margin-right: -6px;
+	margin-top: -3px;
+	height: 21px;
+}
+
+
+.chapterCloseButton {
+	background-image: url(/global/ui/richmedia/images/UMP/skins/default/btn_close_horz.png);
+	width: 34px;
+	height: 29px;
+	cursor:pointer;
+}

@@ -1,0 +1,46 @@
+<!--
+<h1>Listing clients</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Industry</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# @clients.each do |client| %>
+  <tr>
+    <td><%#= client.name %></td>
+    <td><%#= client.industry %></td>
+    <td><%#= link_to 'Show', client %></td>
+    <td><%#= link_to 'Edit', edit_client_path(client) %></td>
+    <td><%#= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<%# end %>
+</table>
+
+<br />
+
+<%#= link_to 'New Client', new_client_path %>
+-->
+<div style="opacity: 1;" id="ajax-content-wrapper">
+    <div id="sub">
+        <div id="subtop">
+            <%= render "home/sub_nav_admin"%>
+        </div>                                                               
+        <div id="subbottom" class="clearfix">
+            <%= render "client_sidebar"%>
+            <div id="rightcolbox">
+                <div id="subrightcol" style="padding-top:30px;">
+                    <div id="subrightcol-bottom">
+                        <h2>Client Listing</h2> 
+                        <%= render "client_list"%>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> <!-- END SUB -->
+</div>
+        <!-- END PAGE CONTENT -->

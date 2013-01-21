@@ -1,0 +1,49 @@
+
+<%@clients = Client.all%>
+<!--
+<div id="client_list" >
+<%# @clients.each do |client| %>
+  <p><%#= client.name %></p>
+
+    <table>
+     
+    <%# client.contact_people.each do |contact_person| %>
+      <tr>
+        <td><%#= contact_person.user_id %></td>
+        <td><%#= contact_person.first_name %></td>
+        <td><%#= contact_person.last_name %></td>
+        <td><%#= contact_person.position %></td>
+        <td><%#= link_to 'Show', contact_person %></td>
+        <td><%#= link_to 'Edit', edit_contact_person_path(contact_person) %></td>
+        <td><%#= link_to 'Destroy', contact_person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <%# end %>
+    </table>
+<%#end%>
+</div>
+-->
+<div id="contact_list" >
+<% @clients.each do |client| %>
+<table>
+  <tr><td><%= client.name %></td></tr>
+<% client.contact_people.each do |contact_person| %>
+<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+<td class="list_description" >
+<dl>
+<dt><%= contact_person.last_name %>, <%= contact_person.first_name %></dt>
+<dd>Position: <%= contact_person.position %></dd>
+<dd>E-mail: <%= contact_person.email %></dd>
+<dd>User ID: <%= contact_person.user_id %></dd>
+</dl>
+</td>
+<td class="list_actions" >
+<%= link_to 'Edit', edit_contact_person_path(contact_person) %> |
+<%= link_to 'Delete', contact_person,
+:confirm => 'Are you sure?',
+:method => :delete %>
+</td>
+</tr>
+<% end %>
+</table>
+<% end %>
+</div>

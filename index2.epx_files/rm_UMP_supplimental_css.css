@@ -1,0 +1,226 @@
+/* 
+universal media player supplemental css
+Version: 10.22.12
+
+
+08.04.11 - Creation Date
+03.13.12 - Added an important to the UMP_CTA padding to fix some cascading issues...
+05.09.12 - added mapHover style for RIP Image map pointer cursor
+07.16.12 - Fixes for the Begin Registration button to solve for Cascading Styles of VML.
+07.18.12 - more VML CSS fixes. EVERYTHING IS !IMPORTANT
+10.22.12 - Preview Type: Full code;
+
+*/
+
+#ump_controller {
+	display:none;	
+	}
+.ump_videoSpace {
+	background-color: #333333;	
+	z-index: 10;
+	}
+.ump_controlsSpace {
+	background-color: #262626;
+	z-index: 20;
+	}
+	
+	
+/* Call-To-Action Layer
+--------------------------------------------------*/	
+/*div.UMP_CTA {
+	
+	}*/
+div.UMP_CTA_BG {
+	background-color: #000000;
+	/* for IE */
+	filter:alpha(opacity=70);
+	/* CSS3 standard */
+	opacity:0.7;
+	}
+div.UMP_CTA h1 {
+	font:bold 16px/16px Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	}
+div.UMP_CTA div.buttons{
+	position:relative;
+	height:30px;
+	cursor:pointer;
+	}
+div.UMP_CTA div.image {
+	position:relative;
+	/*cursor:default;*/
+	}
+div.UMP_CTA div.image {
+	height:auto;
+	}
+div.UMP_CTA p.replay, #secondary-hero div.UMP_CTA p  {
+	float:left;
+	margin:0 !important;
+	/*padding: 0px;
+	padding-left:33px;*/
+	padding: 0px 0px 0px 33px !important;
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_yellow_left_replay.png) no-repeat;
+	font:bold 16px/16px Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	text-align:left;
+	width: auto !important;
+	}
+div.UMP_CTA p.replay span {
+	float:right;
+	padding:8px 10px 0 0;
+	height:22px;
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_yellow_right.png) top right no-repeat;
+	font:bold 16px/16px Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	}
+.mapHover {
+	cursor: pointer;
+}
+
+/*area:mapHover, .mapHover { cursor: pointer; }*/
+
+
+/* Closed-Captioning Layer
+--------------------------------------------------*/	
+.UMP_CC_span {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;	
+	}
+.UMP_CC_thecc {
+	padding: 12px;	
+	}
+	
+	
+	
+/* Preview Pause Pop-Up Text */
+
+.UMP_Prev_Text {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	/*font-weight: 600;
+	text-align: center;*/
+	clear: both;
+}
+
+.UMP_Prev_Text_Div {
+	text-align: center;
+}
+
+.UMP_Prev_Full_Div {
+	text-align: left;
+	padding: 0px 20px 0px 20px;
+
+	/* prevent the entire thing from selecting on scrub past preview time */
+    -moz-user-select: none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+
+}
+
+.UMP_Prev_Title {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	color: #FFF;
+	/*font-weight: bold;*/
+	clear: both;
+	margin: 0px 0px 6px 0px;
+}
+
+.UMP_Prev_Text_Div #buttons p, .UMP_Prev_Full_Div #buttons p {	
+	margin: 0 !important;
+	line-height: normal;
+}
+
+.UMP_Prev_Bullets ul {
+	display: block;	
+	color: #FFF;
+	margin: 10px 0px 20px 0px;
+}
+
+.UMP_Prev_Bullets ul li {
+	list-style: disc inside;
+}
+
+
+
+.UMP_Prev_But_Text {
+	font-family: Verdana, Geneva, sans-serif !important;
+	font-size: 12px !important;
+	font-weight: normal !important;
+}
+
+.UMP_Prev_But_Text span {
+	padding: 8px 10px 0 0 !important;
+}
+
+.UMP_Prev_But_P {
+	background: url("/global/ui/images/buttons/btn-cta-orangeright.png") no-repeat scroll right top transparent;
+	display: block;
+	float: left;
+	font-weight: normal;
+	line-height: 30px;
+	padding: 0 25px 0 0;
+	text-decoration: none;
+	color: #FFFFFF;
+	outline: medium none;
+}
+
+.UMP_Prev_But_P span {
+	background: url("/global/ui/images/buttons/btn-cta-orangeleft.png") no-repeat scroll left top transparent;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 0 0 17px;
+	text-decoration: none;
+}
+
+	
+/* On-Rollover Share/Recommend Buttons Layer
+--------------------------------------------------*/	
+div.UMP_Buttons_BG {
+	background-color: #000;
+	/* for IE */
+	filter:alpha(opacity=30);
+	/* CSS3 standard */
+	opacity:0.3;
+	}
+div.share, div.recommend {
+	display:block;
+	position:relative;
+	float:right;
+	height:26px;
+	cursor:pointer;
+	}
+div.share { 
+	width:79px; 
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_share_recommend.png) no-repeat; 
+	}
+div.recommend { 
+	width:113px; 
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_share_recommend.png) -79px 0 no-repeat; 
+	}
+	
+	
+/* On-Rollover Timestamp Layer
+--------------------------------------------------*/	
+div.timeStamp_BG { 
+	padding-bottom:1px;
+	}
+.times, .timesalt {	
+	padding-top:4px;
+	width:79px;
+	height:23px;
+	background:url(/global/ui/richmedia/images/UMP/skins/default/time_bubble.png) no-repeat;
+	font:normal 11px/11px Arial, Helvetica, sans-serif;
+	text-align:center;
+	}
+.timesalt {	
+	background:url(/global/ui/richmedia/images/UMP/skins/default/time_bubble_alt.png) no-repeat;
+	}

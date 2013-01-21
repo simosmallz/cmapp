@@ -1,0 +1,59 @@
+<!--
+<%#@clients = Client.all%>
+
+<h1>Listing contact_people</h1>
+<%# @clients.each do |client| %>
+  <p><%#= client.name %></p>
+
+    <table>
+        
+      <tr>
+        <th>User</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Position</th>
+        <th>Client</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+  
+    <%# @contact_people.each do |contact_person| %>
+    <%# client.contact_people.each do |contact_person| %>
+      <tr>
+        <td><%#= contact_person.user_id %></td>
+        <td><%#= contact_person.first_name %></td>
+        <td><%#= contact_person.last_name %></td>
+        <td><%#= contact_person.position %></td>
+       
+        <td><%#= client.name %></td>
+   
+        <td><%#= link_to 'Show', contact_person %></td>
+        <td><%#= link_to 'Edit', edit_contact_person_path(contact_person) %></td>
+        <td><%#= link_to 'Destroy', contact_person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <%# end %>
+    </table>
+<%#end%>
+<br />
+
+<%#= link_to 'New Contact person', new_contact_person_path %>
+-->
+<div style="opacity: 1;" id="ajax-content-wrapper">
+    <div id="sub">
+        <div id="subtop">
+            <%= render "home/sub_nav_admin"%>
+        </div>                                                               
+        <div id="subbottom" class="clearfix">
+            <%= render "contact_sidebar"%>
+            <div id="rightcolbox">
+                <div id="subrightcol" style="padding-top:30px;">
+                    <div id="subrightcol-bottom">
+                        <h2>Client Listing</h2> 
+                        <%= render "contact_list"%>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> <!-- END SUB -->
+</div>

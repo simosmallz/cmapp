@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  device_type: MyString
+  name: MyString
+  serial_number: MyString
+  manufacturer: MyString
+  model_number: MyString
+  status: MyString
+  location: MyText
+  warranty: MyString
+
+two:
+  device_type: MyString
+  name: MyString
+  serial_number: MyString
+  manufacturer: MyString
+  model_number: MyString
+  status: MyString
+  location: MyText
+  warranty: MyString

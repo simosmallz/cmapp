@@ -1,0 +1,30 @@
+/* B3/SAP_Container_Data - blah */
+var migID = '3363';
+try {
+    lbLoad(migID, 'r', ''); pageScrape = document.body.innerHTML;
+    scrapeString0 = "Your Country/Region";
+    scrapeString1 = "Thank you for interest";
+    if (lb_url.indexOf("sap.com/campaigns/betterchoice/index.epx") != -1) {
+        if (pageScrape.indexOf(scrapeString0) != -1) { appendIframe("http://b3.mookie1.com/2/sap.com/betterchoice/registrationpage@x95", "RegOverlay");}
+    }
+    if (lb_url.indexOf("accounts.sap.com") != -1) {
+        if (pageScrape.indexOf(scrapeString1) != -1) {appendIframe("http://b3.mookie1.com/2/sap.com/betterchoice/thankyoupage@x95", "ThankYouPage");}
+    }
+
+    if (lb_url.indexOf("sap.com/campaign/na/usa/CRM-US12-PPC-PPCFEDAC1/index.html") != -1) {
+        document.getElementById("tab-1-intro").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x21", "tab-1-intro");}
+        document.getElementById("tab-2-manage-funds").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x22", "tab-2-manage-funds");}
+        document.getElementById("tab-3-cut-spending").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x23", "tab-3-cut-spending");}
+        document.getElementById("tab-4-reduce-waste").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x24", "tab-4-reduce-waste");}
+        document.getElementById("tab-5-boost-revenue").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x25", "tab-5-boost-revenue");}
+        document.getElementById("manage-funds-cta-text").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x26", "manage-funds-cta-text");}
+        document.getElementById("manage-funds-cta-button").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x26", "manage-funds-cta-button");}
+        document.getElementById("cut-spending-cta-text").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x27", "cut-spending-cta-text");}
+        document.getElementById("cut-spending-cta-button").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x27", "cut-spending-cta-button");}
+        document.getElementById("reduce-waste-cta-text").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x28", "reduce-waste-cta-text");}
+        document.getElementById("reduce-waste-cta-button").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x28", "reduce-waste-cta-button");}
+        document.getElementById("boost-revenue-cta-text").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x29", "boost-revenue-cta-text");}
+        document.getElementById("boost-revenue-cta-button").onmouseup = function () {appendIframe("http://b3.mookie1.com/2/sap.com/publicsectorawareness/iframes@x29", "boost-revenue-cta-button");}
+    }
+}
+catch (e) { if (isInDebug) { console.log(e); } }

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div id="staff_list" >
+<p>
+  <b>Staff:</b>
+  <%= @staff.staff_user_id %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @staff.password %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @staff.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @staff.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @staff.email %>
+</p>
+<p>
+<%= link_to '<< Back', :controller=>"staffs", :action=>"index" %>
+</p>
+</div>

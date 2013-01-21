@@ -1,0 +1,76 @@
+<%@client = Client.all%>
+<%= form_for(@contact_person) do |f| %>
+  <% if @contact_person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact_person.errors.count, "error") %> prohibited this contact_person from being saved:</h2>
+
+      <ul>
+      <% @contact_person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!--
+  <div class="field">
+    <%#= f.label 'User Id' %><br />
+    <%#= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%#= f.label :first_name %><br />
+    <%#= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%#= f.label :last_name %><br />
+    <%#= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%#= f.label :position %><br />
+    <%#= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%#= f.label :client_id %><br />
+    <%#= f.number_field :client_id %>
+  </div>
+  <div class="field">
+    <%#= f.label 'Client Name'%><br />
+    <%#= f.collection_select :client_id, @client, :id, :name, :prompt => "Select a client" %>
+  </div>
+  <div class="actions">
+    <%#= f.submit %>
+  </div>
+<%# end %>
+-->
+<div id="contact_form">
+  <table>
+    <tr>
+      <td><%= f.label 'User Id' %></td>
+      <td><%= f.text_field :user_id %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :first_name %></td>
+      <td><%= f.text_field :first_name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :last_name %></td>
+      <td><%= f.text_field :last_name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :email %></td>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :position %></td>
+      <td><%= f.text_field :position %></td>
+    </tr>
+    <tr>
+      <td><%= f.label 'Client Name'%></td>
+      <td><%= f.collection_select :client_id, @client, :id, :name, :prompt => "Select a client" %></td>
+    </tr>  
+    <tr>
+      <td><%= f.submit %></td>
+      <td></td>
+    </tr>  
+  </table>
+</div>
+<%end%>

@@ -1,0 +1,25 @@
+<%= form_for(@approval_member) do |f| %>
+  <% if @approval_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@approval_member.errors.count, "error") %> prohibited this approval_member from being saved:</h2>
+
+      <ul>
+      <% @approval_member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

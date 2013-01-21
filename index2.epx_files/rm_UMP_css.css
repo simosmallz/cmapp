@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* universal media player css 12.10.12 */
+
+
+.UMP_div {
+	position:relative;
+	display:none;
+	overflow: hidden;
+	}
+.UMP_data {
+	display:none;
+	overflow: hidden;
+	}
+span.btnPlay {
+	width:123px;
+	height:51px;
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_play_lg.png) no-repeat;
+	cursor: pointer;
+	}
+.UMP_NoFlash {
+	color: #000000;
+	text-align: center;
+	padding-top: 10px;
+	}
+.UMP_NoFlash_text {
+	color: #FFFFFF;
+	}
+
+
+
+/* VIEWS
+-------------------------- */
+div.UMP_OverlayBackground {
+	background-color: #000000;
+	/* for IE */
+	filter:alpha(opacity=80);
+	/* CSS3 standard */
+	opacity:0.8;
+	position:absolute;
+	z-index:3002;
+	width:540px;
+	}
+	div#UMP_OverlayBkgdFull {
+		top:0;
+		height:303px;
+		}
+	div#UMP_OverlayBkgdPartialRegister {
+		top:120px;
+		height:183px;
+		}
+div.UMP_OverlayPartialRegister {
+	position:absolute;
+	z-index:3003;
+	top:120px;
+	width:540px;
+	height:183px;
+	font:bold 13px/15px Arial, Helvetica, sans-serif;
+	text-align:center;
+	color:#FFFFFF;
+	}
+div.UMP_OverlayFullRegister {
+	position:absolute;
+	z-index:3003;
+	top:80px;
+	width:540px;
+	height:303px;
+	font:bold 13px/13px Arial, Helvetica, sans-serif;
+	text-align:center;
+	color:#FFFFFF;
+	}
+div.UMP_OverlayFullRegister	p { 
+	margin:10px 0;
+	}	
+div.UMP_ButtonContainerPlayLarge {
+	position:relative;
+	margin:20px auto;
+	width:123px;
+	height:51px;
+	cursor:pointer;
+	}
+div.UMP_ButtonContainer {
+	position:relative;
+	margin:30px auto 0 auto;
+	width:auto;
+	height:30px;
+	cursor:pointer;
+	}
+div.UMP_ButtonContainer p.register {
+	float:left;
+	margin:0 0 0 190px;
+	padding-left:10px;
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_yellow_left.png) no-repeat;
+	font:bold 16px/16px Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	text-align:left;
+	}
+div.UMP_ButtonContainer p.register span {
+	float:right;
+	padding:8px 10px 0 0;
+	height:22px;
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_yellow_right.png) top right no-repeat;
+	}
+span.UMP_Link {
+	color:#fcb913;
+	font-weight:bold;
+	cursor:pointer;
+	}
+span.UMP_LargePlayButton {
+	display:block;
+	width:123px;
+	height:51px;
+	background:url(/global/ui/richmedia/images/UMP/skins/default/btn_play_lg.png) no-repeat;
+	}
+	
+	
+	
+	
+/* Stand alone asset page for RIP */
+#staticAsset_Large {
+	display: block;
+	margin-left: 20px;	
+	margin-right: 20px;
+}
+
+#staticAsset_Large h1 {
+	padding: 0px !important;
+	margin-left: 0px !important;
+}
+
+#staticAsset_Large h2 {
+	font-size: 14px;
+    padding: 0px !important;
+	margin-top: -15px;
+	margin-bottom: 10px;
+}
+
+#staticAsset_Large p{
+	margin-top: 10px;
+
+}

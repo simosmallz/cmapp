@@ -1,0 +1,1 @@
+﻿var RegistrationPageUrl = 'https://www54.sap.com/bin/sapcom/register/show.html?';

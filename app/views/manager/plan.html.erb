@@ -1,0 +1,53 @@
+<%= form_for(@change) do |f| %>
+  <% if @change.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@change.errors.count, "error") %> prohibited this change from being saved:</h2>
+
+      <ul>
+      <% @change.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 
+ 
+<div class="main" id="main-two-columns-left">
+
+        <div class="right" id="main-content">
+
+            <div class="section">
+
+                <div class="section-content">
+
+                    <h1><%= @change.title + "-" + @change.id.to_s%></h1>
+                    <table>
+                      <tr>
+                        <td>Add New Plan:</td>
+                      </tr>
+                      <tr>
+                        <td><%= text_area_tag :plan %></td>
+                      </tr>
+                      <tr>
+                        <td><%= f.submit %></td>
+                      </tr>
+                    </table>
+
+                  <% end %>
+
+          <div class="content-separator"></div>
+
+                    <div class="clearer">&nbsp;</div>
+
+                </div>
+
+            </div>
+
+            <div class="clearer">&nbsp;</div>
+            
+        </div>
+
+        <%=render 'changes/change_sidebar'%>
+
+    </div>

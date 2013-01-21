@@ -1,0 +1,54 @@
+<!--
+<%#@client = Client.find(params[:id])%>
+<p id="notice"><%#= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%#= @contact_person.user_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%#= @contact_person.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%#= @contact_person.last_name %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%#= @contact_person.position %>
+</p>
+<p>
+  <b>Client:</b>
+  <%#= @contact_person.client_id %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%#= @client.name %>
+</p>
+
+<%#= link_to 'Edit', edit_contact_person_path(@contact_person) %> |
+<%#= link_to 'Back', contact_people_path %>
+-->
+<div style="opacity: 1;" id="ajax-content-wrapper">
+    <div id="sub">
+        <div id="subtop">
+            <%= render "home/sub_nav_admin"%>
+        </div>                                                             
+        <div id="subbottom" class="clearfix">
+            <%= render "contact_sidebar"%>
+            <div id="rightcolbox">
+                <div id="subrightcol" style="padding-top:30px;">
+                    <div id="subrightcol-bottom">
+                        <h2>New Contact Personnel</h2> 
+                        <%= render "view"%>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> <!-- END SUB -->
+</div>

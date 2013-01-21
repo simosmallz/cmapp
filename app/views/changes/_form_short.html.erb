@@ -1,0 +1,51 @@
+<%= form_for(@change) do |f| %>
+  <% if @change.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@change.errors.count, "error") %> prohibited this change from being saved:</h2>
+
+      <ul>
+      <% @change.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table>
+  <tr>
+    <td><%= f.label :title %></td>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :description %></td>
+    <td><%= f.text_area :description, :rows=>3%></td>
+  </tr>
+  <tr>
+    <td><%= f.label :emergency %></td>
+    <td><%= f.text_field :emergency %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :precaution %></td>
+    <td><%= f.text_field :precaution %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :impact %></td>
+    <td><%= f.text_field :impact %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :period_start %></td>
+    <td><%= f.date_select :period_start %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :period_end %></td>
+    <td><%= f.date_select :period_end %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :approval_status %></td>
+    <td><%= f.select :approval_status, options_for_select([['Approved' ,'Approved'], ['Review', 'Review'], ['Rejected', 'Rejected']]) %></td>
+  </tr>
+  <tr>
+    <td><%= f.submit %></td>
+  </tr>
+</table>
+<% end %>

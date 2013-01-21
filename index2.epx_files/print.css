@@ -1,0 +1,36 @@
+
+
+/*****************************************************************************************************************
+ 
+	1) GLOBAL ELEMENTS THAT SHOULD NOT BE PRINTED
+	2) OTHER ELEMENTS THAT SHOULD APPEAR DIFFERENTLY WHEN PRINTED
+
+******************************************************************************************************************/
+	
+	
+	
+	
+	/* =====  GLOBAL ELEMENTS THAT SHOULD NOT BE PRINTED   ===== */
+	
+		#bg, #nav-utilitytop, #nav-utilitybtm, #searchsite, #nav-main, #hero, #sap-news, #footer, #nav-sub, #subleftcol, #blackout, a.btn-close-overlay, ul.user-actions
+			{ display:none!important; }
+	
+	
+	    #header h1 span { color: #000; }
+		
+		/* ===== Q tag added for SEO to enable H1 removal ===== */
+		#header q span { color: #000; }
+		q { quotes: none !important; }
+		
+		#subbottom { width: 650px; }
+	
+		#page, #overlay {
+			width: 650px;
+			left: 0px;
+			margin-left: 0px;
+		}
+	    * { background: #ffffff none!important; background-color: #ffffff!important; }
+	    
+	
+	
+	/* =====  OTHER ELEMENTS THAT SHOULD APPEAR DIFFERENTLY WHEN PRINTED   ===== */

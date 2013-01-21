@@ -1,0 +1,101 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cmapp</title>
+  <%#= stylesheet_link_tag    "application", :media => "all" %>
+  <%#= javascript_include_tag "application" %>
+  <%#= csrf_meta_tags %>
+</head>
+<body>
+
+<%#= yield %>
+
+</body>
+</html>
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content=""/>
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <title>CMAPP</title>
+</head>
+
+<body>
+
+<div id="site-wrapper">
+
+  <div id="header">
+
+    <div id="top">
+
+      <div class="left" id="logo">
+        <%= link_to image_tag("logo.gif"), home_index_path %>
+      </div>
+
+      <div class="left navigation" id="main-nav">
+
+        <ul class="tabbed">
+          <li class="current-tab"><a href="index.html">News</a></li>
+          <li><a href="#">Notifications</a></li>
+        </ul>
+
+        <div class="clearer">&nbsp;</div>
+
+      </div>
+
+      <div class="clearer">&nbsp;</div>
+
+    </div>
+
+    <div class="navigation" id="sub-nav">
+
+      <ul class="tabbed">
+        <li><%=link_to 'Change Issuing', :controller=>"changes", :action=>"index"%></li>
+        <li><a href="style-demo.html">Review/Approval</a></li>
+        <li><%=link_to 'Admin', :controller=>"home", :action=>"admin_index"%></li>
+      </ul>
+
+      <div class="clearer">&nbsp;</div>
+
+    </div>
+
+  </div>
+
+
+
+ <%=yield%>
+
+  <div id="footer">
+
+    <div class="left" id="footer-left">
+      
+      <%= image_tag("logo-small.gif") %>
+      
+      <p>&copy; 2002-2009 Simple Organization. All rights Reserved</p>
+
+      <p class="quiet"><a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a></p>
+      
+      <div class="clearer">&nbsp;</div>
+
+    </div>
+
+    <div class="right" id="footer-right">
+
+    </div>
+
+    <div class="clearer">&nbsp;</div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

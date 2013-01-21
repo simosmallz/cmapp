@@ -1,0 +1,22 @@
+<div>
+                <div id="subleftcol" class="searchtraining" style="width:260px;">
+                    <h1>Contact Person </h1>
+                    <p>Record Menu:</p>
+                    <ul>
+                        <li><%=link_to 'Create Contact', :controller=>"contact_people", :action=>"new"%></li>
+                        <!--
+                        <li><%#=link_to 'Edit Client', :controller=>"home", :action=>"staff"%></li>
+                        <li><%#=link_to 'Delete Client', :controller=>"home", :action=>"staff_del"%></li>
+                        -->
+                    </ul>
+                    <hr>                    
+                    <h3>Search for Contact</h3>
+                    <form action="https://training.sap.com/us/en/search" method="get" id="trainingsearch" name="trainingsearch" title="Find SAP Training Courses and Certifications" target="_blank">
+                        <fieldset>
+                            <label for="trainingsearch-input">Search Here</label>
+                            <input id="trainingsearch-input" class="focusClear" name="query" style="width:100px;" type="textfield">
+                            <a href="#" class="btn-cta-sm" onclick="document.forms['trainingsearch'].submit(); return false;"><span style="color: black;">Search</span></a>
+                        </fieldset>
+                    </form>
+                </div>
+</div>

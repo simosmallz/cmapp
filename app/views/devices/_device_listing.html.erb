@@ -1,0 +1,37 @@
+<div id="device_index">
+<table>
+  <tr>
+    <td style="font-weight:bold; color:#000;">Device type</td>
+    <td style="font-weight:bold; color:#000;">Name</td>
+    <td style="font-weight:bold; color:#000;">Serial number</td>
+    <!--
+    <th>Manufacturer</th>
+    <th>Model number</th>
+    <th>Status</th>
+    <th>Location</th>
+    <th>Warranty</th>
+-->
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @devices.each do |device| %>
+  <tr>
+    <td><%= device.device_type %></td>
+    <td><%= device.name %></td>
+    <td><%= device.serial_number %></td>
+    <!--
+    <td><%#= device.manufacturer %></td>
+    <td><%#= device.model_number %></td>
+    <td><%#= device.status %></td>
+    <td><%#= device.location %></td>
+    <td><%#= device.warranty %></td>
+-->
+    <td><%= link_to 'More..', device %></td>
+    <td><%= link_to 'Edit', edit_device_path(device) %></td>
+    <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+</div>

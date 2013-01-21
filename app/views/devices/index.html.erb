@@ -1,0 +1,57 @@
+<!--
+<h1>Listing devices</h1>
+
+<table>
+  <tr>
+    <th>Device type</th>
+    <th>Name</th>
+    <th>Serial number</th>
+    <th>Manufacturer</th>
+    <th>Model number</th>
+    <th>Status</th>
+    <th>Location</th>
+    <th>Warranty</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<%# @devices.each do |device| %>
+  <tr>
+    <td><%#= device.device_type %></td>
+    <td><%#= device.name %></td>
+    <td><%#= device.serial_number %></td>
+    <td><%#= device.manufacturer %></td>
+    <td><%#= device.model_number %></td>
+    <td><%#= device.status %></td>
+    <td><%#= device.location %></td>
+    <td><%#= device.warranty %></td>
+    <td><%#= link_to 'Show', device %></td>
+    <td><%#= link_to 'Edit', edit_device_path(device) %></td>
+    <td><%#= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<%# end %>
+</table>
+
+<br />
+
+<%#= link_to 'New Device', new_device_path %>
+-->
+<div style="opacity: 1;" id="ajax-content-wrapper">
+    <div id="sub">
+        <div id="subtop">
+            <%= render "home/sub_nav_admin"%>
+        </div>                                                               
+        <div id="subbottom" class="clearfix">
+            <%= render "device_sidebar"%>
+            <div id="rightcolbox">
+                <div id="subrightcol" style="padding-top:30px;">
+                    <div id="subrightcol-bottom">
+                        <h2>Client Listing</h2> 
+                        <%= render "device_listing"%>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> <!-- END SUB -->
+</div>

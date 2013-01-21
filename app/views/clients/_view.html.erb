@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div id="client_list" >
+<p>
+  <b>Name:</b>
+  <%= @client.name %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= @client.industry %>
+</p>
+<% @client.contact_people.each do |contact_person| %>
+	<p>
+	    <b>Contct Person:</b>
+	    <%= contact_person.first_name %>
+	</p>
+<% end %>
+	<p>
+		<b><%= link_to '<< Back', clients_path %></b>
+	</p>
+</div>

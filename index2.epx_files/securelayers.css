@@ -1,0 +1,25 @@
+        iframe { border:0 none!important; overflow:hidden; }
+		#layer-blackout, #dialog-blackout { display:none; background:#000; position:fixed; top:0px; left:0px; width:100%; height:100%; opacity:0.6; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter: alpha(opacity=60); z-index:300; }
+		/*#layer-wrap { display:none; margin-left:-475px; position:relative; width:950px; top:20px; left:50%; z-index:310; background:#fff; min-height:100px; margin-bottom:50px; }*/
+		#layer-wrap { display:none; margin-left:-475px; position:absolute; width:977px; top:20px; left:50%; z-index:310; background:#fff; min-height:100px; margin-bottom:50px; }
+		
+		#layer-wrap.lw-contact { position:absolute; left:470; height: 1050px; width: 954px; top:0; background:none; border-top:10px solid #f2bb00; z-index: 3100; }
+		#layer-wrap.lw-contact iframe { width:954px; height:1700px; }
+		/*#layer-wrap.lw-myprofile { position:absolute; left:477px; top:-19px; margin-left:0px; width:500px; background:#fff; z-index:320; }*/
+		#layer-wrap.lw-myprofile { position:absolute; left:607px; top:30px; margin-left:0px; width:500px; background:#fff; z-index:320; }
+		#layer-wrap.lw-myprofile iframe { width:500px; height:337px !important; }
+		#layer-wrap.lw-myprofile iframe #subfull { margin-left:220px; }
+		/*#layer-wrap.lw-registration { background:none; position:absolute; width:977px; top:0px; z-index:320; }*/
+		#layer-wrap.lw-registration { background:none; position:absolute; width:977px; top:20px; z-index:320; height: 100%;}
+		#layer-wrap.lw-registration iframe { width:977px; height:1400px !important; }
+		#layer-dialog { position:fixed; top:0px; left:0px; width:100% !important; height:100% !important;  }
+		#dialog-inner { background:#fff; position:absolute; top:20%; left:50%; width:500px; margin-left:-250px; margin-top:10%; border:5px #000 solid; padding:20px; z-index:310; }
+		#winback-frame { width:100%; height:100%; position:absolute; top:0px; left:0px; z-index:1000000; }
+		
+		#utility.mysapaccount { margin-left:220px }
+		#utility.mysapaccount .utilityleft { padding:0 10px 10px 0; }
+		
+		a.btn-close-layer { display:block; width:23px; height:50px; position:absolute; top:5px; right:-23px; background:url(/global/ui/images/buttons/btn-close-overlay.png) top left no-repeat; }
+		a.btn-close-layer span { display:none; }
+		#layer-wrap.lw-registration  a.btn-close-layer { right:-19px; }
+		

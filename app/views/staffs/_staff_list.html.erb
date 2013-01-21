@@ -1,0 +1,53 @@
+<%- @staffs = Staff.all %>
+<!--
+<div id="client_list" >
+<table>
+<%# @clients.each do |client| %>
+<tr class="<%#= cycle('list_line_odd', 'list_line_even') %>" >
+<td class="list_description" >
+<dl>
+<dt><%#= client.name %></dt>
+<dd><%#= client.industry %></dd>
+</dl>
+</td>
+<td class="list_actions" >
+<%#= link_to 'Show', client %> |
+<%#= link_to 'Edit', edit_client_path(client) %> |
+<%#= link_to 'Delete', client,
+:confirm => 'Are you sure?',
+:method => :delete %>
+</td>
+</tr>
+<%# end %>
+</table>
+</div>
+<br />
+-->
+<div id="staff_list" >
+
+<table>
+
+<% @staffs.each do |staff| %>
+<tr class="<%= cycle('list_line_odd', 'list_line_even') %>" >
+<td class="list_id_numbering" ><%= staff.id %></td>
+<td class="list_description" >
+<dl>
+<dt><%= staff.last_name %>,<%= staff.first_name %></dt>
+<dd><%= staff.email %></dd>
+</dl>
+</td>
+<td class="list_actions" >
+Staff ID: <%= staff.staff_user_id %>
+</td>
+<td class="list_actions2" >
+<%= link_to 'View', staff %> 
+<%= link_to 'Edit', edit_staff_path(staff) %> 
+<%= link_to 'Delete', staff,
+:confirm => 'Are you sure?',
+:method => :delete %>
+</td>
+</tr>
+<% end %>
+</table>
+</div>
+<br />

@@ -1,0 +1,103 @@
+
+<div class="main" id="main-two-columns-left">
+
+        <div class="right" id="main-content">
+
+            <div class="section">
+
+                <div class="section-content">
+
+                    <h1>Change Listing</h1>
+
+                    <div class="archive-pagination archive-pagination-top">
+                            
+                        <div class="left"><a href="#">&#171; Previous page</a></div>
+                        <div class="right"><a href="#">Next page &#187;</a></div>
+
+                        <div class="clearer">&nbsp;</div>
+                
+                    </div>
+
+                    <% @changes.each do |change| %>
+                    <div class="post">
+
+                        <div class="archive-post-date">
+                            <div class="archive-post-day">>></div>
+                            <br/>
+                            <div class="archive-post-month"><%= change.period_start %></div>
+                        </div>
+
+                        <div class="archive-post-title">
+                            <h3><%= change.title %></h3>
+                            <div class="post-date"><%= change.description %><br>Status: <%= change.approval_status %><br>
+                            <%= link_to 'View', change %> |
+                            <%= link_to 'Edit', edit_change_path(change) %> |
+                            <%= link_to 'Destroy', change, method: :delete, data: { confirm: 'Are you sure?' } %>
+                            </div>
+                        </div>
+
+                        <div class="clearer">&nbsp;</div>
+
+                    </div>
+
+                    <div class="archive-separator"></div>
+                    <%end%>
+                    <div class="archive-pagination archive-pagination-top">
+                            
+                        <div class="left"><a href="#">&#171; Previous page</a></div>
+                        <div class="right"><a href="#">Next page &#187;</a></div>
+
+                        <div class="clearer">&nbsp;</div>
+                
+                    </div>
+                    <div class="content-separator"></div>
+
+                    <div class="col3 left">
+                        <div class="column-content">
+
+                            <div class="post">
+                                <h3><a href="#">Article title</a></h3>
+                                <p>Integer diam elit, condi mentum ac semper ut, tincidunt non diam. Ut congue at commodo aenean euismod tincidunt lorem euismod.</p>
+                                <a href="#" class="more">Read more &#187;</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col3 col3-mid left">
+                        <div class="column-content">
+
+                            <div class="post">
+                                <h3><a href="#">Second Article Title</a></h3>
+                                <p>Sed congue lacinia leo, sed dignissim odio pharetra vel. Fusce a dignissim dui. Fusce semper porttitor enim dapibus venenatis.</p>
+                                <a href="#" class="more">Read more &#187;</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col3 right">
+                        <div class="column-content">
+
+                            <div class="post">
+                                <h3><a href="#">Third title</a></h3>
+                                <p>Sed auctor hendrerit eros eu eleifend. Cras hendrerit iaculis sodales. Pellentesque interdum rhoncus magna.</p>
+                                <a href="#" class="more">Read more &#187;</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="clearer">&nbsp;</div>
+
+                </div>
+
+            </div>
+
+            <div class="clearer">&nbsp;</div>
+            
+        </div>
+
+        <%=render 'change_sidebar'%>
+
+    </div>

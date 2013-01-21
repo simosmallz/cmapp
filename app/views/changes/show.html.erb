@@ -1,0 +1,86 @@
+
+
+<div class="main" id="main-two-columns-left">
+
+        <div class="right" id="main-content">
+
+            <div class="section">
+
+                <div class="section-content">
+
+                    <h1><%= @change.title %></h1>
+
+          <p id="notice"><%= notice %></p>
+          <table class=" data-table">
+            <tr>
+              <th>Description:</th>
+              <td><%= @change.description %></td>
+            </tr>
+            <tr>
+              <th>Emergency:</th>
+              <td><%= @change.emergency %></td>
+            </tr>
+            <tr>
+              <th>Precaution:</th>
+              <td><%= @change.precaution %></td>
+            </tr>
+            <tr>
+              <th>Impact:</th>
+              <td><%= @change.impact %></td>
+            </tr>
+            <tr>
+              <th>Period start:</th>
+              <td><%= @change.period_start %></td>
+            </tr>
+            <tr>
+              <th>Period end:</th>
+              <td><%= @change.period_end %></td>
+            </tr>
+            <tr>
+              <th>Approval status:</th>
+              <td><%= @change.approval_status %></td>
+            </tr>
+            <tr>
+              <th style="verical-align:top;">Task :<br/>
+              <%= link_to 'Click to add new task', manager_task_path(:change_id => @change.id)%></th>
+              <td><% @change.tasks.each do |ct| %>
+              <%= ct.description %><br /><br />
+            <% end %>
+            </td>
+            </tr>
+            <tr>
+              <th style="verical-align:top;">Plan :<br/>
+              <%= link_to 'Click to add new plan', manager_plan_path(:change_id => @change.id)%></th>
+              <td><% @change.plans.each do |ct| %>
+              <%= ct.description %><br /><br />
+            <% end %>
+            </td>
+            </tr>
+          </table>
+          <table style=" width:100px;">
+            <tr>
+              <td><%= button_to 'Edit Change Record', edit_change_path(@change) %></td>
+            </tr>
+          </table>
+          <!--
+          <p>
+            <b>Device:</b>
+            <%#= @change.device_id %>
+          </p>
+          -->
+
+          <div class="content-separator"></div>
+
+                    <div class="clearer">&nbsp;</div>
+
+                </div>
+
+            </div>
+
+            <div class="clearer">&nbsp;</div>
+            
+        </div>
+
+        <%=render 'change_sidebar'%>
+
+    </div>
